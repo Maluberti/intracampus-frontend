@@ -1,0 +1,44 @@
+.read-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 999;
+    align-items: center;
+}
+    .read-box{
+        margin-top: -80px;
+        height:30rem;
+        width: 30rem;
+        .read-field{
+        margin-top: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 25px;
+        }
+        .atletica{
+            
+        }
+        .logo{
+            height: 150px;
+        }
+
+    }
+    .verificado{
+   
+        height: 30px;
+        margin-left: 10px;
+
+    }
+
+    .icon{
+        margin-top: 100%;
+        .link{
+            color:black;
+            font-size: small;
+        }
+    }

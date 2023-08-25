@@ -1,0 +1,26 @@
+div{
+    display:flex;
+    justify-content: center;
+}
+input{
+    width: 20rem;
+    height: 1.5rem;
+    background-color: transparent;
+    border-radius: 10px;
+}
+p{
+    font-family: Mongolian Baiti;
+font-size:130%;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.buscar{
+    margin-top: 5%;
+    width: 20rem;
+    font-size: large;
+    border-radius: 10px;
+}
+mat-form-field{
+    width: 20rem;
+}

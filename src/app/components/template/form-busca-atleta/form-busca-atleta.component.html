@@ -1,0 +1,13 @@
+<div>
+    <P>Busque o atleta pelo número USP:</P>
+    
+</div>
+<div class="form-field">
+    <mat-form-field appearance="outline" class="example-full-width">
+        <mat-label>Número Usp</mat-label>
+        <input type="text"  [(ngModel)]="numeroDigitado" (keypress)="somenteNumeros($event)" matInput placeholder="Ex. 13648653">
+    </mat-form-field>
+</div>
+<div class="Buscar" >
+    <a routerLink="atleta/{{numeroDigitado}}"><button mat-raised-button color="accent" class="buscar">Buscar</button></a>
+</div>

@@ -1,0 +1,36 @@
+<app-header></app-header>
+<div class = "read-container">
+    <div class="read-box" >
+        <div class="read-field">
+            <img class="logo" src={{img_atl}} alt="atletica">
+        </div>
+        <div class ="read-field atletica" >
+            {{atleta.atleticaName}}
+        </div>
+        <div class ="read-field nome" >
+            {{atleta.name}}
+        </div>
+        <div class ="read-field usp" >
+            Número USP: 
+            {{atleta.id}}
+        </div>
+        <div class ="read-field rg" >
+            RG:
+            {{atleta.rg}}
+        </div>
+        <div class ="read-field cpf" >
+            CPF:
+            {{atleta.cpf}} 
+        </div>
+        <div class="read-field">
+            <img class="verificado" src={{icone_url}} alt="oi">
+        </div>
+        <div class="read-field Buscar" >
+            <a routerLink="/"><button mat-raised-button color="accent" class="buscar">Nova Consulta</button></a>
+        </div>
+    </div>
+</div>
+      
+<div class="icon">
+    <a href="https://www.flaticon.com/br/icones-gratis/carraca" title="carraça ícones" class="link">Carraça ícones criados por Octopocto - Flaticon</a>
+</div>

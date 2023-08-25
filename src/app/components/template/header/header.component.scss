@@ -1,0 +1,59 @@
+
+.header {
+  height: 80px;
+  flex: 1 1 auto;
+  box-shadow: 0px 5px 4px 0px rgba(0, 0, 0, 0.40);
+  position: relative;
+  z-index: 1;
+}
+
+.example-spacer {
+  flex: 5 5 auto;
+}
+
+button{
+  flex: 0 1 auto;
+
+  margin: 0 15px;
+  border-radius: 30px;
+  
+
+}
+.home {
+
+  font-family: "El Messiri";
+}
+.cadastro{
+  flex: 0 1 auto;
+}
+.login{
+  flex: 0 1 auto;
+}
+.logo-nome{
+  display: flex;
+  align-items: center;
+}
+.logo{
+  margin-right: 3rem;
+  height: 4rem;
+}
+.atleticas{
+  width: 100%;
+  height: auto;
+  box-shadow: 0px 5px 4px 0px rgba(0, 0, 0, 0.40);
+}
+p{
+  color: #000;
+text-align: center;
+font-family: Mongolian Baiti;
+font-size: 150%;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.menu{
+  width: 20rem;
+}
+
+
