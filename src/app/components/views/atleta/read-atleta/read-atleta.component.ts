@@ -46,7 +46,7 @@ export class ReadAtletaComponent implements OnInit{
       console.log(resposta)
       this.atleta = resposta
       this.atleticaImg(this.atleta.atleticaName);
-      if(resposta.formado = true){this.icone_url ="assets/formado.png"}
+      if(resposta.formado == true){this.icone_url ="assets/formado.png"}
       
     }
     )
