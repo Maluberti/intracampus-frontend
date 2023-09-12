@@ -42,3 +42,28 @@
             font-size: small;
         }
     }
+.not-found{
+        display: flex;
+        justify-content: center;
+        margin-top: 15rem;
+        font-size: 20px;
+        color: red;
+    
+}
+
+.error{
+    .Buscar{
+        margin-top: 1rem;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.gif-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 15rem;
+    .gif{
+        height:50px;
+    }
+}
