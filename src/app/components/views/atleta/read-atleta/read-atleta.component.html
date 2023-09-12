@@ -1,33 +1,57 @@
 <app-header></app-header>
-<div class = "read-container">
-    <div class="read-box" >
-        <div class="read-field">
-            <img class="logo" src={{img_atl}} alt="atletica">
-        </div>
-        <div class ="read-field atletica" >
-            {{atleta.atleticaName}}
-        </div>
-        <div class ="read-field nome" >
-            {{atleta.name}}
-        </div>
-        <div class ="read-field usp" >
-            Número USP: 
-            {{atleta.id}}
-        </div>
-        <div class ="read-field rg" >
-            RG:
-            {{atleta.rg}}
-        </div>
-        <div class ="read-field cpf" >
-            CPF:
-            {{atleta.cpf}} 
-        </div>
-        <div class="read-field">
-            <img class="verificado" src={{icone_url}} alt="oi">
-        </div>
-        <div class="read-field Buscar" >
-            <a routerLink="/"><button mat-raised-button color="accent" class="buscar">Nova Consulta</button></a>
-        </div>
+<div *ngIf="carregando; else infos" class="loading-spinner">
+    <div class="gif-container">
+        <img src="assets/carregando.gif" alt="GIF animado carregando" class="gif">
     </div>
 </div>
+
+<ng-template #infos>
+    <ng-container *ngIf="erro; else atletaDetails">
+        <div class="error atleta">
+            <div class="read-field not-found">
+                Atleta não encontrado!
+            </div>
+            <div class="read-field Buscar" >
+                <a routerLink="/"><button mat-raised-button color="warn" class="buscar">Nova Consulta</button></a>
+            </div>
+        </div>
+        
+    </ng-container>
+    
+    <ng-template #atletaDetails>
+        <div class = "read-container">
+            <div class="read-box" >
+                <div class="read-field">
+                    <img class="logo" src={{img_atl}} alt="atletica">
+                </div>
+                <div class ="read-field atletica" >
+                    {{atleta.atleticaName}}
+                </div>
+                <div class ="read-field nome" >
+                    {{atleta.name}}
+                </div>
+                <div class ="read-field usp" >
+                    Número USP: 
+                    {{atleta.id}}
+                </div>
+                <div class ="read-field rg" >
+                    RG:
+                    {{atleta.rg}}
+                </div>
+                <div class ="read-field cpf" >
+                    CPF:
+                    {{atleta.cpf}} 
+                </div>
+                <div class="read-field">
+                    <img class="verificado" src={{icone_url}} alt="oi">
+                </div>
+                <div class="read-field Buscar" >
+                    <a routerLink="/"><button mat-raised-button color="accent" class="buscar">Nova Consulta</button></a>
+                </div>
+            </div>
+        </div>
+    
+    </ng-template>
+
+</ng-template>
 
