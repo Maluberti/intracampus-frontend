@@ -10,9 +10,10 @@ import { Atletica } from './atletica.model';
   styleUrls: ['./read-atleta.component.scss']
 })
 export class ReadAtletaComponent implements OnInit{
-
-  img_atl:string="";
+img_atl:string="";
   icone_url:string="assets/normal.png";
+  carregando = true;
+  erro = false;
 
   atleta: Atleta = {
     id: 0,
@@ -47,9 +48,20 @@ export class ReadAtletaComponent implements OnInit{
       this.atleta = resposta
       this.atleticaImg(this.atleta.atleticaName);
       if(resposta.formado == true){this.icone_url ="assets/formado.png"}
-      
+    },
+    (error) => {
+      // Trate o erro aqui
+      console.error("Erro ao buscar o atleta:", error);
+
+      // Verifique se o erro indica que o atleta não foi encontrado
+      if (error.status === 500) {
+        this.erro = true; // Define o atleta como null para indicar que não foi encontrado
+        this.carregando = false;
+      }
     }
-    )
+
+    );
+
   }
 
 
@@ -83,6 +95,7 @@ export class ReadAtletaComponent implements OnInit{
         this.img_atl = "assets/lus.png";
         break;
     }
+    this.carregando = false;
   }
 
 
